@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+<body style="background-color:rgb(240, 240, 240);">
+<h3 style="color:Tomato;">Banque internationale arabe de Tunisie</h3>
+<h4>Adresse : Ave Habib Bourguiba, Manouba <br>
+Téléphone : 31 311 000</h4>
+
+
+<h1  style="background-color:hsl(0, 0%, 60%);" > <center>     Extrait bancaire  </center></h1>
+<h6> Numéro du compte : 00214586554965<br>
+Monnaie du compte: Dinars tunisien
+</h6>
+<table>
+<thead>
+<tr><th>Date operation</th><th>Type operation</th><th>montant operation</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><${op.date operation}></td>
+<td><${op.date operation}></td>
+<td><${op.date operation}></td>
+</tr>
+
+</tbody>
+</table>
+<h3> Votre solde final est : <%=c.getSolde() %></h3>
+<div>
+<a href="/ajoutoperation?num=<%=c.getNumCompte()%>">Ajouter operation
+bancaire...</a>
+</div>
+</body>
+</html>

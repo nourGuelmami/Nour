@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+  <tr>
+     <th>id</th>
+     <th>nom</th>
+     <th>num</th>
+   </tr>
+   
+ <tr th:each="c:${liste}">
+     <td th:text="${c.id}"></td>
+     <td th:text="${c.nom}"></td>
+     <td th:text="${c.num}"></td>
+ </tr>
+     <a th:href="@{/client/liste}">liste client</a>
+     
+   <form action="sauvegarder" method="post" th:object="${client}">
+     nom:<input type="text" name="nom" th:filed="${client.nom}">
+     num:<input type="text" name="nom" th:filed="${client.num}">
+   
+   </form>
+
+</table>
+</body>
+</html>
